@@ -1,0 +1,5 @@
+#!/bin/sh
+DIR=`dirname $0`
+JAR=$DIR/smg-${XXXX}.jar
+
+java -cp $JAR org.anc.lapps.setup.smg.ServiceManagerGenerator $@

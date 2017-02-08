@@ -7,3 +7,10 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+dist
+*.tgz
+VERSION
+src/main/java/**/Version.class
+*.ipr
+*.iws
+*.iml
