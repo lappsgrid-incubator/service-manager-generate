@@ -10,7 +10,7 @@ buildNumber.properties
 dist
 *.tgz
 VERSION
-src/main/java/**/Version.class
+src/main/java/**/Version.java
 *.ipr
 *.iws
 *.iml

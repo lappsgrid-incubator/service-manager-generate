@@ -1,11 +1,13 @@
 #!/bin/sh
 set -eu
 
+CWD=`dirname $0`
 VERSION=`cat VERSION`
 JAR=smg-$VERSION.jar
-OUTDIR=./dist/smg-$VERSION
-SMG=$OUTDIR/smg
-TGZ=smg-${VERSION}.tgz 
+DIST=$CWD/target/dist
+OUTDIR=$DIST/smg-$VERSION
+SCRIPT=$OUTDIR/smg
+TGZ=smg-$VERSION.tgz
 
 echo "Creating distribution for smg v."$VERSION
 
@@ -14,9 +16,9 @@ if [ -e $OUTDIR ] ; then
 fi
 mkdir -p $OUTDIR
 
-cat smg | sed 's/${XXXX}/'$VERSION'/' > $SMG
-chmod ug+x $SMG
+cat smg | sed 's/${VERSION}/'$VERSION'/' > $SCRIPT
+chmod ug+x $SCRIPT
 cp target/$JAR $OUTDIR
-cp src/test/resources/*.config $OUTDIR
-
-tar -czf $TGZ $OUTDIR
+#cp src/test/resources/*.config src/test/resources/*.properties $OUTDIR
+cd $DIST
+tar -czf $TGZ smg-$VERSION

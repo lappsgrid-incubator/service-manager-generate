@@ -150,6 +150,7 @@ class ServiceManagerGenerator {
       PrintWriter out = new PrintWriter(filename)
       out.println("DATABASE=${database.name}")
       out.println("ROLENAME=${database.username}")
+      out.println("PASSWORD=${database.password}")
       out.close()
       println "Generated ${filename}"
    }

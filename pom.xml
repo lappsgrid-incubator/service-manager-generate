@@ -3,7 +3,7 @@
     <parent>
         <groupId>org.anc.maven</groupId>
         <artifactId>groovy-parent-pom</artifactId>
-        <version>1.5.3</version>
+        <version>1.5.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.anc.lapps.setup</groupId>

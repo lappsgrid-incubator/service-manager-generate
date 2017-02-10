@@ -17,8 +17,7 @@ jar:
 	
 clean:
 	mvn clean
-	rm -rf dist
-	
+
 dist:
 	./make-dist.sh
 	
